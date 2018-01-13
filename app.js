@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let wordCount = 10;
+    const wordCount = 10;
     let guessCount = 4;
     let password = '';
 
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var guess = e.target.innerText;
         var similarityScore = compareWords(guess, password);
         e.target.classList.add("disabled");
-        e.target.innerText = e.target.innerText + ` --> Matching Letters:  ${similarityScore}`;
+        e.target.innerText = `${e.target.innerText}  --> Matching Letters:  ${similarityScore}`;
         setGuessCount(guessCount - 1);
   
         // check whether the game is over
